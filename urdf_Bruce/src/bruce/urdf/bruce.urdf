@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="bruce">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00014047 -0.00088602 0.074729"
+        rpy="0 0 0" />
+      <mass
+        value="23.629" />
+      <inertia
+        ixx="0.054484"
+        ixy="4.6017E-05"
+        ixz="-0.0004046"
+        iyy="0.12489"
+        iyz="1.0974E-06"
+        izz="0.12873" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_FL_Hip">
+    <inertial>
+      <origin
+        xyz="0.071488 -0.01672 -4.7324E-05"
+        rpy="0 0 0" />
+      <mass
+        value="2.9" />
+      <inertia
+        ixx="0.00042335"
+        ixy="7.1318E-06"
+        ixz="-5.3717E-08"
+        iyy="0.0010234"
+        iyz="5.5207E-08"
+        izz="0.00063315" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_FL_Hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_FL_Hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_FL_Hip"
+    type="revolute">
+    <origin
+      xyz="0.2635 0.0975 0.088"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_FL_Hip" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.78"
+      upper="0.78"
+      effort="200"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_FL_Thigh">
+    <inertial>
+      <origin
+        xyz="-0.044216 0.098313 -0.056091"
+        rpy="0 0 0" />
+      <mass
+        value="5.58" />
+      <inertia
+        ixx="0.013192"
+        ixy="-3.7942E-05"
+        ixz="0.0085143"
+        iyy="0.022095"
+        iyz="4.7614E-06"
+        izz="0.0093309" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_FL_Thigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_FL_Thigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_FL_Thigh"
+    type="revolute">
+    <origin
+      xyz="0.07725 0.01475 0"
+      rpy="0 0 0" />
+    <parent
+      link="Link_FL_Hip" />
+    <child
+      link="Link_FL_Thigh" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.22"
+      upper="2.61"
+      effort="200"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_FL_Calf">
+    <inertial>
+      <origin
+        xyz="0.00831504007924233 2.04280116085087E-05 -0.149346339600864"
+        rpy="0 0 0" />
+      <mass
+        value="1.0558984918551" />
+      <inertia
+        ixx="0.0158759027698112"
+        ixy="-1.12826056122136E-07"
+        ixz="-0.000666532426552572"
+        iyy="0.0161104978528813"
+        iyz="-3.38114996104678E-06"
+        izz="0.000461995654151211" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_FL_Calf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_FL_Calf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_FL_Calf"
+    type="revolute">
+    <origin
+      xyz="-0.17662 0.11925 -0.27282"
+      rpy="0 -0.82073 0" />
+    <parent
+      link="Link_FL_Thigh" />
+    <child
+      link="Link_FL_Calf" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.3"
+      upper="0.52"
+      effort="200"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_FL_Foot">
+    <inertial>
+      <origin
+        xyz="2.03976966761665E-07 -3.49370387453529E-06 -0.0232846790067169"
+        rpy="0 0 0" />
+      <mass
+        value="0.207210160440462" />
+      <inertia
+        ixx="8.28679461308315E-05"
+        ixy="-9.61861016200342E-10"
+        ixz="-2.44760136441819E-10"
+        iyy="0.000134761885893141"
+        iyz="-1.45434477714823E-08"
+        izz="0.000154364742055223" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_FL_Foot.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_FL_Foot.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_FL_Foot"
+    type="fixed">
+    <origin
+      xyz="-0.0052369 -3.0756E-05 -0.33328"
+      rpy="0 0.82073 0" />
+    <parent
+      link="Link_FL_Calf" />
+    <child
+      link="Link_FL_Foot" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Link_FR_Hip">
+    <inertial>
+      <origin
+        xyz="0.071488 0.01672 4.7324E-05"
+        rpy="0 0 0" />
+      <mass
+        value="2.9" />
+      <inertia
+        ixx="0.00042335"
+        ixy="-7.1318E-06"
+        ixz="5.3717E-08"
+        iyy="0.0010234"
+        iyz="5.5207E-08"
+        izz="0.00063315" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_FR_Hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_FR_Hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_FR_Hip"
+    type="revolute">
+    <origin
+      xyz="0.2635 -0.0975 0.088"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_FR_Hip" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.78"
+      upper="0.78"
+      effort="200"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_FR_Thigh">
+    <inertial>
+      <origin
+        xyz="-0.044283 -0.09836 -0.056051"
+        rpy="0 0 0" />
+      <mass
+        value="5.58" />
+      <inertia
+        ixx="0.013228"
+        ixy="2.355E-05"
+        ixz="0.0085092"
+        iyy="0.022116"
+        iyz="5.2111E-06"
+        izz="0.0093162" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_FR_Thigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_FR_Thigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_FR_Thigh"
+    type="revolute">
+    <origin
+      xyz="0.07725 -0.01475 0"
+      rpy="0 0 0" />
+    <parent
+      link="Link_FR_Hip" />
+    <child
+      link="Link_FR_Thigh" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.22"
+      upper="2.61"
+      effort="200"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_FR_Calf">
+    <inertial>
+      <origin
+        xyz="0.00831504035394826 2.04277784137952E-05 -0.149346341163595"
+        rpy="0 0 0" />
+      <mass
+        value="1.05589847316517" />
+      <inertia
+        ixx="0.0158759025959391"
+        ixy="-1.12821989682437E-07"
+        ixz="-0.000666532397024257"
+        iyy="0.016110497677588"
+        iyz="-3.38117456450316E-06"
+        izz="0.000461995644802376" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_FR_Calf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_FR_Calf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_FR_Calf"
+    type="revolute">
+    <origin
+      xyz="-0.17662 -0.11925 -0.27282"
+      rpy="0 -0.82073 0" />
+    <parent
+      link="Link_FR_Thigh" />
+    <child
+      link="Link_FR_Calf" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.3"
+      upper="0.52"
+      effort="200"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_FR_Foot">
+    <inertial>
+      <origin
+        xyz="2.03977359281016E-07 -3.4937011642866E-06 -0.0232845615214562"
+        rpy="0 0 0" />
+      <mass
+        value="0.207210160452942" />
+      <inertia
+        ixx="8.28679461315494E-05"
+        ixy="-9.61863534291446E-10"
+        ixz="-2.44760199716181E-10"
+        iyy="0.000134761885892514"
+        iyz="-1.45434485426757E-08"
+        izz="0.000154364742055096" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_FR_Foot.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_FR_Foot.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_FR_Foot"
+    type="fixed">
+    <origin
+      xyz="-0.0052369 -3.0756E-05 -0.33328"
+      rpy="0 0.82073 0" />
+    <parent
+      link="Link_FR_Calf" />
+    <child
+      link="Link_FR_Foot" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Link_HL_Hip">
+    <inertial>
+      <origin
+        xyz="-0.071488 -0.01672 4.7324E-05"
+        rpy="0 0 0" />
+      <mass
+        value="2.9" />
+      <inertia
+        ixx="0.00042335"
+        ixy="-7.1318E-06"
+        ixz="-5.3717E-08"
+        iyy="0.0010234"
+        iyz="-5.5207E-08"
+        izz="0.00063315" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_HL_Hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_HL_Hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_HL_Hip"
+    type="revolute">
+    <origin
+      xyz="-0.2635 0.0975 0.088"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_HL_Hip" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.78"
+      upper="0.78"
+      effort="200"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_HL_Thigh">
+    <inertial>
+      <origin
+        xyz="-0.044216 0.098313 -0.056091"
+        rpy="0 0 0" />
+      <mass
+        value="5.58" />
+      <inertia
+        ixx="0.013192"
+        ixy="-3.7942E-05"
+        ixz="0.0085143"
+        iyy="0.022095"
+        iyz="4.7614E-06"
+        izz="0.0093309" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_HL_Thigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_HL_Thigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_HL_Thigh"
+    type="revolute">
+    <origin
+      xyz="-0.07725 0.01475 0"
+      rpy="0 0 0" />
+    <parent
+      link="Link_HL_Hip" />
+    <child
+      link="Link_HL_Thigh" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.22"
+      upper="2.61"
+      effort="200"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_HL_Calf">
+    <inertial>
+      <origin
+        xyz="0.00831504038311021 2.04282154486757E-05 -0.14934634134056"
+        rpy="0 0 0" />
+      <mass
+        value="1.05589847179624" />
+      <inertia
+        ixx="0.0158759025719917"
+        ixy="-1.1283011530811E-07"
+        ixz="-0.000666532392742764"
+        iyy="0.0161104976518646"
+        iyz="-3.38112702745972E-06"
+        izz="0.000461995645412917" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_HL_Calf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_HL_Calf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_HL_Calf"
+    type="revolute">
+    <origin
+      xyz="-0.17662 0.11925 -0.27282"
+      rpy="0 -0.82073 0" />
+    <parent
+      link="Link_HL_Thigh" />
+    <child
+      link="Link_HL_Calf" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.3"
+      upper="0.52"
+      effort="200"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_HL_Foot">
+    <inertial>
+      <origin
+        xyz="2.03976984913812E-07 -3.49370198221566E-06 -0.0232846790072918"
+        rpy="0 0 0" />
+      <mass
+        value="0.207210160452256" />
+      <inertia
+        ixx="8.28679461309755E-05"
+        ixy="-9.61863856201169E-10"
+        ixz="-2.44759867046544E-10"
+        iyy="0.000134761885893068"
+        iyz="-1.45434476926484E-08"
+        izz="0.000154364742053954" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_HL_Foot.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_HL_Foot.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_HL_Foot"
+    type="fixed">
+    <origin
+      xyz="-0.0052369 -3.0756E-05 -0.33328"
+      rpy="0 0.82073 0" />
+    <parent
+      link="Link_HL_Calf" />
+    <child
+      link="Link_HL_Foot" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Link_HR_Hip">
+    <inertial>
+      <origin
+        xyz="-0.071488 0.01672 -4.7324E-05"
+        rpy="0 0 0" />
+      <mass
+        value="2.9" />
+      <inertia
+        ixx="0.00042335"
+        ixy="7.1318E-06"
+        ixz="5.3717E-08"
+        iyy="0.0010234"
+        iyz="-5.5207E-08"
+        izz="0.00063315" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_HR_Hip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_HR_Hip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_HR_Hip"
+    type="revolute">
+    <origin
+      xyz="-0.2635 -0.0975 0.088"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_HR_Hip" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.78"
+      upper="0.78"
+      effort="200"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_HR_Thigh">
+    <inertial>
+      <origin
+        xyz="-0.044283 -0.09836 -0.056051"
+        rpy="0 0 0" />
+      <mass
+        value="5.58" />
+      <inertia
+        ixx="0.013228"
+        ixy="2.355E-05"
+        ixz="0.0085092"
+        iyy="0.022116"
+        iyz="5.2111E-06"
+        izz="0.0093162" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_HR_Thigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_HR_Thigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_HR_Thigh"
+    type="revolute">
+    <origin
+      xyz="-0.07725 -0.01475 0"
+      rpy="0 0 0" />
+    <parent
+      link="Link_HR_Hip" />
+    <child
+      link="Link_HR_Thigh" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.22"
+      upper="2.61"
+      effort="200"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_HR_Calf">
+    <inertial>
+      <origin
+        xyz="0.008315 2.0428E-05 -0.14935"
+        rpy="0 0 0" />
+      <mass
+        value="1.0559" />
+      <inertia
+        ixx="0.015876"
+        ixy="-1.1283E-07"
+        ixz="-0.00066653"
+        iyy="0.01611"
+        iyz="-3.3812E-06"
+        izz="0.000462" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_HR_Calf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_HR_Calf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_HR_Calf"
+    type="revolute">
+    <origin
+      xyz="-0.17662 -0.11925 -0.27282"
+      rpy="0 -0.82073 0" />
+    <parent
+      link="Link_HR_Thigh" />
+    <child
+      link="Link_HR_Calf" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.3"
+      upper="0.52"
+      effort="200"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_HR_Foot">
+    <inertial>
+      <origin
+        xyz="2.0398E-07 -3.4937E-06 -0.023285"
+        rpy="0 0 0" />
+      <mass
+        value="0.20721" />
+      <inertia
+        ixx="8.2868E-05"
+        ixy="-9.6187E-10"
+        ixz="-2.4476E-10"
+        iyy="0.00013476"
+        iyz="-1.4543E-08"
+        izz="0.00015436" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_HR_Foot.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce/meshes/Link_HR_Foot.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_HR_Foot"
+    type="fixed">
+    <origin
+      xyz="-0.0052369 -3.0756E-05 -0.33328"
+      rpy="0 0.82073 0" />
+    <parent
+      link="Link_HR_Calf" />
+    <child
+      link="Link_HR_Foot" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="200"
+      velocity="1" />
+  </joint>
+  <link
+    name="Link_Imu">
+    <inertial>
+      <origin
+        xyz="-0.010003954046808 -0.000165764866729895 -0.0627856508179323"
+        rpy="0 0 0" />
+      <mass
+        value="102.906450990547" />
+      <inertia
+        ixx="3.23429566177285"
+        ixy="-0.000970428612024616"
+        ixz="-0.217730156054071"
+        iyy="10.3263864928422"
+        iyz="0.000640499073068455"
+        izz="11.3004398614228" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce_1/meshes/Link_Imu.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bruce_1/meshes/Link_Imu.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Imu"
+    type="fixed">
+    <origin
+      xyz="-0.0040103 0 0.114"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_Imu" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
